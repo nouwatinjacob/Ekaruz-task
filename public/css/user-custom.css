@@ -1,0 +1,38 @@
+
+.left-side {
+  height: 100vh;
+  background: #343a40;
+} 
+
+ul.nav li {
+  list-style: none;
+}
+
+.nav a {
+  text-align: center;
+  color: #ccc;
+  display: block;
+  padding: 5px;
+  font-size: 1.2em;
+  border-bottom: 1px solid #0a0a0a;
+  border-top: 1px solid #0a0a0a;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.nav a:hover {
+  background-color: #d8d8d6;
+  color: #000;
+  padding-left: 20px;
+}
+
+.nav a.selected {
+    background-color: #d8d8d6;
+  color: #000;
+}
+
+#nav {
+  margin-top: 20px;
+}
