@@ -12,11 +12,11 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">    
 </head>
 <body>
     
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">    
       <a class="navbar-brand" href= "{{ url('/') }}"        
        >{{ config('app.name', 'Ekaruz Task') }}</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,7 +39,7 @@
             @else
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="www.example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img src="/uploads/avatars/{{ Auth::user()->avatar }}" style="width:30px; height:30px; position:absolute; top:10px; left:-25px; border-radius:50%" class="hidden-sm-down">
+                    <img src="/uploads/avatars/{{ Auth::user()->avatar }}" style="width:30px; height:30px; position:absolute; top:10px; left:-30px; border-radius:50%" class="hidden-sm-down">
                     {{ Auth::user()->username }} <span class="caret"></span>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="dropdown01">
@@ -58,7 +58,7 @@
                 </li>
             @endguest
 		</ul>
-      </div>
+      </div>      
     </nav>
 
     @yield('content')
