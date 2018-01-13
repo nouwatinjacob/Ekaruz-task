@@ -4,13 +4,15 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb container mt-50 mb-10 col-md-9 mx-auto bg-white shadow-lite">
+                <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+            </ol>
+        </nav>
 
-                <div class="panel-body">
                     @if (session('status'))
                         <div class="alert alert-success">
-                            {{ session('status') }}
+                            <p>{{ session('status') }}</p>
                         </div>
                     @endif
 
@@ -18,8 +20,6 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
 @endsection
 
 @extends('layouts.footer')

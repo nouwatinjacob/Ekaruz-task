@@ -1,16 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container" id="content">
-    <div class="card card-outline-primary mb-3 text-center">
-        <div class="card-block">
+<div class="container py-3 myForm">
+    <div class="row">
+        <div class="col-md-6 col-lg-4 mx-auto">
+            <div class="card card-body">
+            <h3 class="text-center mb-4">Sign-up</h3>
                 <form class="form-horizontal form-signin" method="POST" action="{{ route('login') }}">
                 {{ csrf_field() }}
-                <h2  class="card-title">Log in</h2>
+                <fieldset>       
                 <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }} has-success">
-                    <label for="email" class="control-label" id="inputValid">E-Mail Address</label>
 
-                        <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+                    <input id="email" type="email" class="form-control input-lg" placeholder="Email" name="email" value="{{ old('email') }}" required autofocus>
 
                         @if ($errors->has('email'))
                             <span class="help-block">
@@ -20,9 +21,8 @@
                 </div>
 
                 <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }} has-success">
-                    <label for="password" class="col-md-4 control-label" id="inputValid">Password</label>
 
-                        <input id="password" type="password" class="form-control" name="password" required>
+                        <input id="password" type="password" class="form-control input-lg" placeholder="Password" name="password" required>
 
                         @if ($errors->has('password'))
                             <span class="help-block">
@@ -31,25 +31,25 @@
                         @endif
                 </div>
 
-                <div class="form-group has-success">
                         <div class="checkbox">
-                            <label>
+                            <label class="small">
                                 <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
                             </label>
                         </div>
-                </div>
+
 
                 <div class="form-group has-success">
-                        <button type="submit" class="btn btn-primary">
-                            Login
-                        </button>
-
                         <a class="btn btn-link" href="{{ route('password.request') }}">
                             Forgot Your Password?
                         </a>
+                    <button type="submit" class="btn btn-lg btn-primary btn-block">
+                        Login
+                    </button>                       
                     </div>
+                </fieldset>    
             </form>
         </div>
     </div>
+</div>
 </div>
 @endsection
