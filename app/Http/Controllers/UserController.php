@@ -49,4 +49,8 @@ class UserController extends Controller
         $user->save();
         return view('profile', array('user' => Auth::user()))->with('info','Profile Sucessfully Updated');
     }
+
+    public function item() {
+        return view('items');
+    }
 }
