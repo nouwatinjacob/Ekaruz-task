@@ -14,7 +14,8 @@
 						<label class="custom-file">
 							<input type="file" id="file" class="custom-file-input avatar-input" name="avatar">
 							<input type="hidden" name="_token" value="{{ csrf_token() }}">
-							<span class="custom-file-control">Choose image</span>
+							<i class="fa fa-file-o custom-file-control">Choose image</i>
+							<!-- <span class="custom-file-control">Choose image</span> -->
 						</label>
 					</div>
 						<button type="submit" class="btn btn-outline-success btn-sm">
